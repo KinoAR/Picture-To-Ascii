@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <title> Picture to Ascii </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel='stylesheet' href="index.css">
+  </head>
+  <body>
+    <div class="content-area container-fluid">
+      <div class="row">
+        <div class="col-xs-12">
+          <h2> Picture to Ascii Character Converter </h2>
+          <p> Enter The Image You want to convert </p>
+          <form>
+            <div class="form-group">
+              <label for="imageFile"> Image File </label>
+              <input type="file" id="image-file" accept="image/*" onchange="KR.imgLoad(event)">
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-6">
+          <h2> Original Picture </h2>
+          <img id="image-preview"  height="250" style="background-color:lightblue;">
+          <canvas id="image-canvas" width="250" height="250" style="background-color:lightblue;"></canvas>
+        </div>
+        <div class="col-xs-6">
+          <h2> ASCII Conversion </h2>
+          <div id="ascii-canvas" class="text-center" width="250" height="250" style="background-color:black;"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>
